@@ -16,6 +16,10 @@ return new class extends Migration
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
             $table->string('descricao', 200);
+            $table->date('dataCompra');
+            $table->decimal('valor', 10, 2);
+            $table->boolean('ativo');
+            $table->integer('estoque');
             $table->timestamps();
         });
     }

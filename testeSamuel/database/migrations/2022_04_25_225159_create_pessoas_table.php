@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('pessoas', function (Blueprint $table) {
             $table->id();
+            $table->string('nome', 50);
+            $table->string('email', 70);
+            $table->string('telefone', 10);
+            $table->integer('idade');
+            $table->boolean('ativo');
+            $table->date('dataCompra');
             $table->timestamps();
         });
     }
